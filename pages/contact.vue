@@ -2,56 +2,33 @@
 	<v-container fill-height fluid>
 		<v-row justify="center">
 			<v-col cols="12" md="8">
-				<material-card color="green" title="Edit Profile" text="Complete your profile">
+				<material-card color="grey" title="Contacts" text="Add Contact">
 					<v-form>
 						<v-container class="py-0">
 							<v-row>
-								<v-col cols="12" md="4">
-									<v-text-field label="Company (disabled)" disabled />
+								<v-col class="d-flex" cols="12" sm="6">
+									<v-select :items="items" label="Contact Owner" outlined></v-select>
 								</v-col>
-
-								<v-col cols="12" md="4">
-									<v-text-field class="purple-input" label="User Name" />
+								<v-col class="d-flex" cols="12" sm="6">
+									<v-select :items="salutations" label="Salutation" outlined></v-select>
 								</v-col>
-
-								<v-col cols="12" md="4">
-									<v-text-field label="Email Address" class="purple-input" />
+								<v-col cols="12" sm="6">
+									<v-text-field label="First Name" outlined></v-text-field>
 								</v-col>
-
-								<v-col cols="12" md="6">
-									<v-text-field label="First Name" class="purple-input" />
+								<v-col cols="12" sm="6">
+									<v-text-field label="Last Name" outlined></v-text-field>
 								</v-col>
-
-								<v-col cols="12" md="6">
-									<v-text-field label="Last Name" class="purple-input" />
+								<v-col class="d-flex" cols="12" sm="6">
+									<v-select :items="types" label="Type" outlined></v-select>
 								</v-col>
-
-								<v-col cols="12">
-									<v-text-field label="Adress" class="purple-input" />
+								<v-col class="d-flex" cols="12" sm="6">
+									<v-select :items="khan_provinces" label="Address Account" outlined></v-select>
 								</v-col>
-
-								<v-col cols="12" md="4">
-									<v-text-field label="City" class="purple-input" />
+								<v-col cols="12" sm="6">
+									<v-text-field label="Mobile Phone" outlined></v-text-field>
 								</v-col>
-
-								<v-col cols="12" md="4">
-									<v-text-field label="Country" class="purple-input" />
-								</v-col>
-
-								<v-col cols="12" md="4">
-									<v-text-field class="purple-input" label="Postal Code" type="number" />
-								</v-col>
-
-								<v-col cols="12">
-									<v-textarea
-										class="purple-input"
-										label="About Me"
-										value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-									/>
-								</v-col>
-
-								<v-col cols="12" class="text-right">
-									<v-btn color="success">Update Profile</v-btn>
+								<v-col cols="12" sm="6">
+									<v-text-field label="Email" outlined></v-text-field>
 								</v-col>
 							</v-row>
 						</v-container>
@@ -62,7 +39,7 @@
 				<material-card class="v-card-profile">
 					<v-avatar slot="offset" class="mx-auto d-block elevation-6" size="130">
 						<img
-							src="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"
+							src="https://d2naeiwbqsldcl.cloudfront.net/eyJidWNrZXQiOiJ6MXMzIiwia2V5IjoiejFfcHJvZHVjdGlvblwvdXBsb2Fkc1wvaW1hZ2VzXC8yMDIxMDFcL2Y1MGZjMzk2ZDExOWJkMTM4NDc5NGQzYThiN2Q5MzI5LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE1MCwiaGVpZ2h0IjoxNTAsImZpdCI6Imluc2lkZSJ9fX0="
 							alt="img"
 						/>
 					</v-avatar>
@@ -85,5 +62,12 @@
 </template>
 
 <script>
-export default {};
+  	export default {
+		data: () => ({
+			salutations: ['Mr.', 'Ms.', 'Mrs.', 'Oknha', 'H.E', 'Dr.', 'Neak Oknha', 'Dato'],
+			types: ['Personal', 'Business'],
+			khan_provinces: ['Toul Kork', 'Sen Sokh', 'Kratie'],
+			items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+		}),
+	};
 </script>
