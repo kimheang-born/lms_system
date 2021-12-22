@@ -49,9 +49,7 @@
 						<v-icon>mdi-package-up</v-icon>
 					</v-list-item-action>
 
-					<v-list-item-title class="font-weight-light">
-						Something else
-					</v-list-item-title>
+					<v-list-item-title class="font-weight-light">Something else</v-list-item-title>
 				</v-list-item>
 			</v-list>
 		</template>
