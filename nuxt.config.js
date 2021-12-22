@@ -13,7 +13,11 @@ export const head = {
 		},
 	],
 	link: [
-		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		{
+			rel: 'icon',
+			type: 'image/x-icon',
+			href: 'https://seeklogo.com/images/H/home-loan-logo-47AE303918-seeklogo.com.png',
+		},
 		{
 			rel: 'stylesheet',
 			href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',

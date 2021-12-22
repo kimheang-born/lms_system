@@ -16,7 +16,7 @@
 		</template>
 
 		<v-list-item two-line>
-			<v-list-item-avatar color="white">
+			<v-list-item-avatar>
 				<v-img
 					src="https://seeklogo.com/images/H/home-loan-logo-47AE303918-seeklogo.com.png"
 					height="34"
