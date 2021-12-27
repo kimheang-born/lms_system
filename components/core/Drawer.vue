@@ -90,7 +90,7 @@ export default {
 				text: 'Contacts',
 			},
 			{
-				to: '/table-list',
+				to: '/properties',
 				icon: 'mdi-clipboard-outline',
 				text: 'Properties',
 			},
