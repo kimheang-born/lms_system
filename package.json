@@ -14,7 +14,10 @@
 		"@ckeditor/ckeditor5-build-classic": "^20.0.0",
 		"@ckeditor/ckeditor5-vue": "^1.0.1",
 		"@nuxtjs/axios": "^5.12.0",
+		"@vuelidate/core": "^2.0.0-alpha.32",
+		"@vuelidate/validators": "^2.0.0-alpha.25",
 		"nuxt": "^2.13.3",
+		"vee-validate": "^4.5.7",
 		"vue-chartist": "^2.3.1",
 		"vuetify": "^2.3.5"
 	},
