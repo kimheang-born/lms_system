@@ -1,175 +1,25 @@
 <template>
-	<v-container fill-height fluid>
-		<v-row>
+	<v-container fill-height fluid grid-list-xl>
+		<v-row justify="center">
 			<v-col cols="12">
 				<div class="my-2">
-					<v-btn color="primary" dark :to="`/loan-contract`">Back to all loan contract</v-btn>
+					<v-btn color="primary" dark :to="`/add-property`">Add property</v-btn>
 				</div>
 			</v-col>
 		</v-row>
-		<v-row>
-			<v-col cols="12" md="9">
-				<v-card class="spacing-playground px-6 pt-10">
-					<v-form>
-						<v-container class="py-0">
-							<v-row>
-								<v-card-text>
-									<p class="text-h6 text--primary">Property Information</p>
-								</v-card-text>
-							</v-row>
-							<v-row>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="items" label="Record Type" outlined></v-select>
-								</v-col>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="salutations" label="Property Type" outlined></v-select>
-								</v-col>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="salutations" label="Current Use" outlined></v-select>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-card-text>
-									<p class="text-h6 text--primary">Address</p>
-								</v-card-text>
-							</v-row>
-							<v-row>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="items" label="Province/City" outlined></v-select>
-								</v-col>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="salutations" label="District/Khan" outlined></v-select>
-								</v-col>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Commune/Sangkat" outlined></v-text-field>
-								</v-col>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Village/Phum" outlined></v-text-field>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-col cols="12" sm="3">
-									<v-file-input
-										accept="image/*"
-										label="Front Side"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-								<v-col cols="12" sm="3">
-									<v-file-input
-										accept="image/*"
-										label="Inside"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-								<v-col cols="12" sm="3">
-									<v-file-input
-										accept="image/*"
-										label="Left Side"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-								<v-col cols="12" sm="3">
-									<v-file-input
-										accept="image/*"
-										label="Right Side"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-card-text>
-									<p class="text-h6 text--primary">Title Deed Information</p>
-								</v-card-text>
-							</v-row>
-							<v-row>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="items" label="Title Deed Type" outlined></v-select>
-								</v-col>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Title Deed No." outlined></v-text-field>
-								</v-col>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Issued Year" outlined></v-text-field>
-								</v-col>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Parcel No." outlined></v-text-field>
-								</v-col>
-								<v-col cols="12" sm="4">
-									<v-file-input
-										accept="image/*"
-										label="Cover Photo"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-								<v-col cols="12" sm="4">
-									<v-file-input
-										accept="image/*"
-										label="Back Side Photo"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-								<v-col cols="12" sm="4">
-									<v-file-input
-										accept="image/*"
-										label="Other Photo"
-										filled
-										prepend-icon="mdi-camera"
-									></v-file-input>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-card-text>
-									<p class="text-h6 text--primary">Property Owner and Instructor</p>
-								</v-card-text>
-							</v-row>
-							<v-row>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="items" label="Property Owner" outlined></v-select>
-								</v-col>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="items" label="Instructor" outlined></v-select>
-								</v-col>
-								<v-col class="d-flex" cols="12" sm="6">
-									<v-select :items="items" label="Property Owner" outlined></v-select>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-card-text>
-									<p class="text-h6 text--primary">Property Price</p>
-								</v-card-text>
-							</v-row>
-							<v-row>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Sale Price(USD)" outlined></v-text-field>
-								</v-col>
-								<v-col cols="12" sm="6">
-									<v-text-field label="Rental Price(USD)" outlined></v-text-field>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-card-text>
-									<p class="text-h6 text--primary">Additional Information</p>
-								</v-card-text>
-							</v-row>
-							<v-row>
-								<v-col cols="12" sm="12">
-									<v-textarea name="input-7-1" label="Additional Information"></v-textarea>
-								</v-col>
-							</v-row>
-							<v-row>
-								<v-col cols="12" class="text-right mb-3">
-									<v-btn color="success">Save and back</v-btn>
-								</v-col>
-							</v-row>
-						</v-container>
-					</v-form>
+		<v-row justify="center">
+			<v-col cols="12">
+				<v-card>
+					<v-card-title>
+						<v-text-field
+							v-model="search"
+							append-icon="mdi-magnify"
+							label="Search"
+							single-line
+							hide-details
+						></v-text-field>
+					</v-card-title>
+					<v-data-table :headers="headers" :items="desserts" :search="search"></v-data-table>
 				</v-card>
 			</v-col>
 		</v-row>
@@ -177,31 +27,106 @@
 </template>
 
 <script>
-export default {
-	data: () => ({
-		salutations: ['Mr.', 'Ms.', 'Mrs.', 'Oknha', 'H.E', 'Dr.', 'Neak Oknha', 'Dato'],
-		types: ['Personal', 'Business'],
-		khan_provinces: ['Toul Kork', 'Sen Sokh', 'Kratie'],
-		items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-		date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().substr(0, 10),
-		pickerDate: null,
-		notes: [],
-		allNotes: [
-			'President met with prime minister',
-			'New power plant opened',
-			'Rocket launch announced',
-			'Global warming discussion cancelled',
-			'Company changed its location',
-		],
-	}),
-	watch: {
-		pickerDate() {
-			this.notes = [
-				this.allNotes[Math.floor(Math.random() * 5)],
-				this.allNotes[Math.floor(Math.random() * 5)],
-				this.allNotes[Math.floor(Math.random() * 5)],
-			].filter((value, index, self) => self.indexOf(value) === index);
-		},
-	},
-};
+  export default {
+    data () {
+      return {
+        search: '',
+        headers: [
+          {
+            text: 'Dessert (100g serving)',
+            align: 'start',
+            filterable: false,
+            value: 'name',
+          },
+          { text: 'Calories', value: 'calories' },
+          { text: 'Fat (g)', value: 'fat' },
+          { text: 'Carbs (g)', value: 'carbs' },
+          { text: 'Protein (g)', value: 'protein' },
+          { text: 'Iron (%)', value: 'iron' },
+        ],
+        desserts: [
+          {
+            name: 'Frozen Yogurt',
+            calories: 159,
+            fat: 6.0,
+            carbs: 24,
+            protein: 4.0,
+            iron: '1%',
+          },
+          {
+            name: 'Ice cream sandwich',
+            calories: 237,
+            fat: 9.0,
+            carbs: 37,
+            protein: 4.3,
+            iron: '1%',
+          },
+          {
+            name: 'Eclair',
+            calories: 262,
+            fat: 16.0,
+            carbs: 23,
+            protein: 6.0,
+            iron: '7%',
+          },
+          {
+            name: 'Cupcake',
+            calories: 305,
+            fat: 3.7,
+            carbs: 67,
+            protein: 4.3,
+            iron: '8%',
+          },
+          {
+            name: 'Gingerbread',
+            calories: 356,
+            fat: 16.0,
+            carbs: 49,
+            protein: 3.9,
+            iron: '16%',
+          },
+          {
+            name: 'Jelly bean',
+            calories: 375,
+            fat: 0.0,
+            carbs: 94,
+            protein: 0.0,
+            iron: '0%',
+          },
+          {
+            name: 'Lollipop',
+            calories: 392,
+            fat: 0.2,
+            carbs: 98,
+            protein: 0,
+            iron: '2%',
+          },
+          {
+            name: 'Honeycomb',
+            calories: 408,
+            fat: 3.2,
+            carbs: 87,
+            protein: 6.5,
+            iron: '45%',
+          },
+          {
+            name: 'Donut',
+            calories: 452,
+            fat: 25.0,
+            carbs: 51,
+            protein: 4.9,
+            iron: '22%',
+          },
+          {
+            name: 'KitKat',
+            calories: 518,
+            fat: 26.0,
+            carbs: 65,
+            protein: 7,
+            iron: '6%',
+          },
+        ],
+      }
+    },
+  }
 </script>
