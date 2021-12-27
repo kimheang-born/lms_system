@@ -64,5 +64,5 @@ export default {
 			this.$refs.form.validate();
 		},
 	},
-}
+};
 </script>
