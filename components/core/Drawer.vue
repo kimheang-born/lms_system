@@ -79,11 +79,11 @@ export default {
 				icon: 'mdi-chart-bubble',
 				text: 'Loan Contracts',
 			},
-			{
-				to: '/user-profile',
-				icon: 'mdi-account',
-				text: 'Users',
-			},
+			// {
+			// 	to: '/user-profile',
+			// 	icon: 'mdi-account',
+			// 	text: 'Users',
+			// },
 			{
 				to: '/contact',
 				icon: 'mdi-account',
